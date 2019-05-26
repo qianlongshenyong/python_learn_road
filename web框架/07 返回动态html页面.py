@@ -76,5 +76,3 @@ while 1:
     response = func(url)
     # 将函数返回的结果发送给浏览器
     conn.send(response)
-
-

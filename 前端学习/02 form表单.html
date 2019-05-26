@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>form 表单示例</title>
+</head>
+<body>
+<!-- 把数据相关的东西放到 form标签中，才可以提供给服务器-->
+<form>
+    <p>用户名： <input type="text"></p>
+    <p>密码：<input type="password"></p>
+    <p>性别：<input name="gender" type="radio">男
+            <input name="gender" type="radio">女</p>
+    <p>生日：<input type="date"></p>
+    <p>爱好：<input type="checkbox">蓝球
+             <input type="checkbox">足球
+             <input type="checkbox">双色球</p>
+    <p><select >
+            <option value="1">北京</option>
+            <option value="=2">上海</option>
+            <option selected="selected" value="3">山东</option>
+        </select>
+        <select >
+              <optgroup label="北京">
+                 <option value="1">沙河</option>
+                 <option value="1">昌平</option>
+                 <option value="1">朝阳</option>
+              </optgroup>
+               <optgroup label="上海">
+                <option value="1">浦东</option>
+                <option value="1">黄埔</option>
+                <option value="1">闵行</option>
+                <option value="1">杨浦</option>
+              </optgroup>
+              <optgroup label="山东">
+                <option value="1">青岛</option>
+                <option value="1">济南</option>
+                <option value="1">烟台</option>
+                <option selected="selected" value="1">泰安</option>
+              </optgroup>
+        </select></p>
+    <p><textarea  cols="30" rows="10"></textarea></p>
+    <p>头像:<input type="file"></p>
+    <p><input type="submit" value="提交信息">
+        <input type="button" value="button">
+        <input type="reset" value="reset"></p>
+</form>
+</body>
+</html>

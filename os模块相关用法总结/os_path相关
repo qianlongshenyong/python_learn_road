@@ -1,0 +1,13 @@
+import os
+#os与sys模块的区别：
+ret=os.path.abspath(__file__)# __file__ 当前文件  abspath 绝对路径
+#python的__file__和__name__变量 https://www.cnblogs.com/jianbonet/p/8663040.html
+print(ret)
+ret2=os.path.dirname(os.path.abspath(__file__)) #路径的上一级目录
+print(ret2)
+ret3=os.path.dirname(__file__)
+print(ret3)
+ret4=os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+print(ret4)
+ret5=os.path.join(ret4,"hehe") #拼接
+print(ret5)

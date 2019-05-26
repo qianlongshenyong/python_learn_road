@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>form 表单示例</title>
+</head>
+<body>
+<!-- 把数据相关的东西放到 form标签中，才可以提供给服务器-->
+<form>
+    <p>用户名： <input type="text"></p>
+    <p>密码：<input type="password"></p>
+    <p>
+        性别：
+        <input name="gender" type="radio" value="1">男  <!-- 男和女在浏览器只是提示性的文字，还需要一个valul值-->
+        <input name="gender" type="radio" value="0">女   <!-- 用1表示男，0表示女>
+        <! --name 的作用有2，1是相同的name，表明了这是单选框，2是为后台提供字典类型数据-->
+    </p>
+    <p>
+        生日：<input type="date">
+    </p>
+    <p>
+        爱好：<!-- 数据结构的类型：{hobby：[蓝球，足球，双色球]}  name=“”名字相同，表示一组-->
+        <input type="checkbox">蓝球
+        <input type="checkbox">足球
+        <input type="checkbox">双色球
+    </p>
+    <p>
+        <!--注意事项 ：提示性语言最好用汉字，但是保存的最好用英文和数字表示，这样在传输和存储过程中更节约-->
+        <select name="city" id="city">
+
+            <option value="1">北京</option>
+            <option value="=2">上海</option>
+            <option selected="selected" value="3">山东</option>
+
+        </select>
+
+        <select name="" id="">
+              <optgroup label="北京">
+                 <option value="1">沙河</option>
+                 <option value="1">昌平</option>
+                 <option value="1">朝阳</option>
+            </optgroup>
+            <optgroup label="上海">
+                <option value="1">浦东</option>
+                <option value="1">黄埔</option>
+                <option value="1">闵行</option>
+                <option value="1">杨浦</option>
+            </optgroup>
+            <optgroup label="山东">
+                <option value="1">青岛</option>
+                <option value="1">济南</option>
+                <option value="1">烟台</option>
+                <option selected="selected" value="1">泰安</option>
+            </optgroup>
+        </select>
+    </p>
+
+    <p>
+        <textarea  cols="30" rows="10">
+
+        </textarea>
+    </p>
+    <p>
+        头像:<input type="file">
+    </p>
+    <p><input type="submit" value="提交信息"></p>
+    <p>
+        <input type="button" value="button">
+    </p>
+
+    <p>
+        <input type="reset" value="reset">
+    </p>
+
+</form>
+</body>
+</html>

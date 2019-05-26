@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>form 表单示例</title>
+</head>
+<body>
+<hr>
+<!-- 把数据相关的东西放到 form标签中，才可以提供给服务器-->
+<form action="http://127.0.0.1:8000/upload/" method="post" enctype="multipart/form-data">
+    <p>用户名： <input name="username" type="text"></p>
+    <p>密码：<input name="passwd" type="password"></p>
+    <p>性别：
+        <input name="gender" type="radio" value="1">男  <!-- 男和女在浏览器只是提示性的文字，还需要一个valul值-->
+        <input name="gender" type="radio" value="0">女   <!-- 用1表示男，0表示女>
+        <! --name 的作用有2，1是相同的name，表明了这是单选框，2是为后台提供字典类型数据-->
+    </p>
+    <p>
+        生日：<input name="birthday" type="date">
+    </p>
+    <p>
+        邮箱<input name="email" type="email">
+    </p>
+    <p>
+        爱好：<!-- 数据结构的类型：{hobby：[蓝球，足球，双色球]}  name=“”名字相同，表示一组-->
+        <input name="hobby" type="checkbox" value="basketball">蓝球
+        <input name="hobby" type="checkbox" value="football">足球
+        <input name="hobby" type="checkbox" value="doubleball">双色球
+    </p>
+    <hr>
+    <p>
+        <!--注意事项 ：提示性语言最好用汉字，但是保存的最好用英文和数字表示，这样在传输和存储过程中更节约-->
+        <select name="city" id="s1">
+
+            <option value="bj" >北京</option>
+            <option value="=sh">上海</option>
+            <option selected="selected" value="sd">山东</option>
+
+        </select>
+
+        <select name="city2" id="s2">
+              <optgroup label="北京">
+                 <option value="sh">沙河</option>
+                 <option value="cp">昌平</option>
+                 <option value="cy">朝阳</option>
+            </optgroup>
+            <optgroup label="上海">
+                <option value="pd">浦东</option>
+                <option value="hp">黄埔</option>
+                <option value="mh">闵行</option>
+                <option value="yp">杨浦</option>
+            </optgroup>
+            <optgroup label="山东">
+                <option value="qd">青岛</option>
+                <option value="jn">济南</option>
+                <option value="yt">烟台</option>
+                <option selected="selected" value="ta">泰安</option>
+            </optgroup>
+        </select>
+    </p>
+
+    <p>
+        <textarea  cols="30" rows="10">
+
+        </textarea>
+    </p>
+    <p>
+        头像:<input name="file" type="file">
+    </p>
+    <p><input type="submit" value="提交信息"></p>
+    <p>
+        <input type="button" value="button">
+    </p>
+
+    <p>
+        <input type="reset" value="reset">
+    </p>
+    <p>
+        <table>
+    <thead>
+    <tr>
+        <th>序号</th>
+        <th>姓名</th>
+        <th>爱好</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>1</td>
+        <td>peter</td>
+        <td>蓝球</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>alex</td>
+        <td>足球</td>
+    </tr>
+    </tbody>
+</table>
+    </p>
+
+</form>
+</body>
+</html>
